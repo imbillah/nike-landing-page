@@ -13,7 +13,7 @@ $blue: #0a89f2;
 $black: #444;
 $white: #fff;
 $light-color: #666;
-$border: 2rem solid $black;
+$border: 2.5px solid $black;
 
 @mixin grid($val) {
   display: grid;
@@ -61,17 +61,24 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  &.active {
+    padding-left: 25rem;
+  }
 }
 .header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -31rem;
   height: 100%;
   width: 30rem;
   background: $blue;
   padding: 2rem;
   z-index: 1000;
 
+  &.active {
+    left: 0;
+  }
   .logo {
     font-size: 3rem;
     color: $white;
@@ -116,5 +123,97 @@ body {
     text-align: center;
     color: $white;
     margin-top: 3rem;
+  }
+}
+#menu-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background: $blue;
+  color: $white;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1100;
+  text-align: center;
+  border-radius: 5px;
+
+  &.fa-times {
+    top: 1.2rem;
+    left: 25rem;
+  }
+}
+section {
+  padding: 5rem 10%;
+}
+.banner {
+  @include flex(center);
+  flex-wrap: wrap-reverse;
+
+  .content {
+    flex: 1 1 40rem;
+
+    span {
+      font-size: 2.5rem;
+      color: $blue;
+    }
+    h3 {
+      @include tittleText(4rem);
+      padding-top: 1rem;
+    }
+    p {
+      @include graphText(1.7rem);
+      padding: 1rem 0;
+    }
+  }
+  .image {
+    flex: 1 1 40rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 5rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  background: none;
+  border: $border;
+  color: $black;
+  font-size: 1.5rem;
+  &:hover {
+    border-color: $blue;
+    color: $white;
+    background: $blue;
+  }
+}
+// media queries
+@media (max-width: 1200px) {
+  body.active {
+    padding-left: 0;
+  }
+  header.active {
+    box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.8);
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .banner.content {
+    font-size: 3rem;
   }
 }

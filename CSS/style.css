@@ -37,15 +37,23 @@ body {
   background-attachment: fixed;
 }
 
+body.active {
+  padding-left: 25rem;
+}
+
 .header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -31rem;
   height: 100%;
   width: 30rem;
   background: #0a89f2;
   padding: 2rem;
   z-index: 1000;
+}
+
+.header.active {
+  left: 0;
 }
 
 .header .logo {
@@ -95,5 +103,126 @@ body {
   text-align: center;
   color: #fff;
   margin-top: 3rem;
+}
+
+#menu-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background: #0a89f2;
+  color: #fff;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1100;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#menu-btn.fa-times {
+  top: 1.2rem;
+  left: 25rem;
+}
+
+section {
+  padding: 5rem 10%;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.banner .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.banner .content span {
+  font-size: 2.5rem;
+  color: #0a89f2;
+}
+
+.banner .content h3 {
+  font-size: 4rem;
+  color: #444;
+  text-transform: capitalize;
+  padding-top: 1rem;
+}
+
+.banner .content p {
+  font-size: 1.7rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+  padding: 1rem 0;
+}
+
+.banner .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.banner .image img {
+  width: 100%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 5rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  background: none;
+  border: 2.5px solid #444;
+  color: #444;
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  border-color: #0a89f2;
+  color: #fff;
+  background: #0a89f2;
+}
+
+@media (max-width: 1200px) {
+  body.active {
+    padding-left: 0;
+  }
+  header.active {
+    -webkit-box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .banner.content {
+    font-size: 3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
