@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  font-family: 'Mulish', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 70%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #0a89f2;
+}
+
+body {
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30rem;
+  background: #0a89f2;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.header .logo {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.header .navbar {
+  padding: 30% 0;
+}
+
+.header .navbar a {
+  display: block;
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.7rem;
+}
+
+.header .share {
+  text-align: center;
+}
+
+.header .share a {
+  height: 5rem;
+  width: 5rem;
+  font-size: 2rem;
+  line-height: 5rem;
+  color: #444;
+  background: #fff;
+  margin: 0 0.3rem;
+  border-radius: 5px;
+}
+
+.header .share a:hover {
+  background: #444;
+  color: #fff;
+}
+
+.header .credit {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 3rem;
+}
+/*# sourceMappingURL=style.css.map */

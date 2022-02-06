@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&display=swap');
+* {
+  font-family: 'Mulish', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+$blue: #0a89f2;
+$black: #444;
+$white: #fff;
+$light-color: #666;
+$border: 2rem solid $black;
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 2rem;
+}
+
+@mixin flex($align) {
+  display: flex;
+  align-items: $align;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@mixin tittleText($tittleSize) {
+  font-size: $tittleSize;
+  color: $black;
+  text-transform: capitalize;
+}
+
+@mixin graphText($graphSize) {
+  font-size: $graphSize;
+  color: $light-color;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+html {
+  font-size: 70%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $blue;
+  }
+}
+body {
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30rem;
+  background: $blue;
+  padding: 2rem;
+  z-index: 1000;
+
+  .logo {
+    font-size: 3rem;
+    color: $white;
+    font-weight: bolder;
+  }
+  .navbar {
+    padding: 30% 0;
+
+    a {
+      display: block;
+      font-size: 2rem;
+      margin: 2rem 0;
+      color: $white;
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.7rem;
+      }
+    }
+  }
+  .share {
+    text-align: center;
+
+    a {
+      height: 5rem;
+      width: 5rem;
+      font-size: 2rem;
+      line-height: 5rem;
+      color: $black;
+      background: $white;
+      margin: 0 0.3rem;
+      border-radius: 5px;
+
+      &:hover {
+        background: $black;
+        color: $white;
+      }
+    }
+  }
+  .credit {
+    font-size: 1.5rem;
+    text-align: center;
+    color: $white;
+    margin-top: 3rem;
+  }
+}
