@@ -198,6 +198,34 @@ section {
   background: #0a89f2;
 }
 
+.products .slide {
+  text-align: center;
+}
+
+.products .slide h3 {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #444;
+  text-transform: capitalize;
+}
+
+.products .slide img {
+  height: 25rem;
+  margin: 5rem 0;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  color: #444;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  color: #0a89f2;
+}
+
 @media (max-width: 1200px) {
   body.active {
     padding-left: 0;

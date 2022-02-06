@@ -13,3 +13,21 @@ window.onscroll = () => {
     document.body.classList.remove('active');
   }
 };
+
+let swiper = new Swiper('.product-slider', {
+  loop: true,
+  spaceBetween: 20,
+  grabCursor: true,
+  centeredSlides: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});

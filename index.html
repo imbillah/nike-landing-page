@@ -14,6 +14,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- header start -->
@@ -50,6 +55,46 @@
       </div>
     </section>
     <!-- banner section ends -->
+    <!-- products section starts -->
+    <section class="products" id="products">
+      <h1 class="heading">Our <span>Products</span></h1>
+      <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide" data-product="product-1">
+            <img src="images/product-img1.jpg" alt="" />
+            <h3>Nike Airmax</h3>
+            <div class="btn">See Details</div>
+          </div>
+          <div class="slide" data-product="product-2">
+            <img src="images/product-img2.jpg" alt="" />
+            <h3>Nike Airmax</h3>
+            <div class="btn">See Details</div>
+          </div>
+          <div class="swiper-slide slide" data-product="product-3">
+            <img src="images/product-img3.jpg" alt="" />
+            <h3>Nike Airmax</h3>
+            <div class="btn">See Details</div>
+          </div>
+          <div class="swiper-slide slide" data-product="product-4">
+            <img src="images/product-img4.jpg" alt="" />
+            <h3>Nike Airmax</h3>
+            <div class="btn">See Details</div>
+          </div>
+          <div class="slide" data-product="product-5">
+            <img src="images/product-img5.jpg" alt="" />
+            <h3>Nike Airmax</h3>
+            <div class="btn">See Details</div>
+          </div>
+          <div class="swiper-slide slide" data-product="product-6">
+            <img src="images/product-img6.jpg" alt="" />
+            <h3>Nike Airmax</h3>
+            <div class="btn">See Details</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- products section ends -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./JS/app.js"></script>
   </body>
 </html>

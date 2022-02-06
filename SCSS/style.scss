@@ -192,6 +192,29 @@ section {
     background: $blue;
   }
 }
+
+.products {
+  .slide {
+    text-align: center;
+    h3 {
+      padding: 1rem 0;
+      @include tittleText(2.5rem);
+    }
+    img {
+      height: 25rem;
+      margin: 5rem 0;
+    }
+  }
+}
+.heading {
+  text-align: center;
+  @include tittleText(4rem);
+  margin-bottom: 3rem;
+
+  span {
+    color: $blue;
+  }
+}
 // media queries
 @media (max-width: 1200px) {
   body.active {
