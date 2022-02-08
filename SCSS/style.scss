@@ -287,7 +287,45 @@ section {
     }
   }
 }
+.services {
+  @include grid(30rem);
+  .box {
+    text-align: center;
+    padding: 2rem;
 
+    i {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: $blue;
+    }
+    h3 {
+      @include graphText(1.7rem);
+    }
+  }
+}
+.reviews {
+  .slide {
+    text-align: center;
+    padding: 2rem;
+    i {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: $light-color;
+    }
+    p {
+      @include tittleText(1.5rem);
+    }
+    img {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      margin: 1rem 0;
+    }
+    h3 {
+      @include tittleText(2rem);
+    }
+  }
+}
 // media queries
 @media (max-width: 1200px) {
   body.active {

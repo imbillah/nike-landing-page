@@ -14,18 +14,18 @@ window.onscroll = () => {
   }
 };
 
-let productPreviewContainer = document.querySelector(
+const productPreviewContainer = document.querySelector(
   '.products-preview-container'
 );
-let prodcutPreview =
+const prodcutPreview =
   productPreviewContainer.querySelectorAll('.product-preview');
 
 document.querySelectorAll('.products .slide .btn').forEach((detailBtn) => {
   detailBtn.onclick = () => {
     productPreviewContainer.style.display = 'block';
-    let name = detailBtn.getAttribute('data-product');
+    const name = detailBtn.getAttribute('data-product');
     prodcutPreview.forEach((preview) => {
-      let target = preview.getAttribute('data-target');
+      const target = preview.getAttribute('data-target');
       if (name == target) {
         preview.style.display = 'flex';
       }
@@ -43,20 +43,24 @@ document
     };
   });
 
-var swiper = new Swiper('.products-slider', {
-  loop: true,
-  spaceBetween: 20,
-  grabCursor: true,
-  centeredSlides: true,
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
+const swiperSlides = (id) => {
+  const swiper = new Swiper(id, {
+    loop: true,
+    spaceBetween: 20,
+    grabCursor: true,
+    centeredSlides: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
     },
-    768: {
-      slidesPerView: 2,
-    },
-    991: {
-      slidesPerView: 3,
-    },
-  },
-});
+  });
+};
+swiperSlides('.products-slider');
+swiperSlides('.review-slider');

@@ -323,6 +323,62 @@ section {
   color: #0a89f2;
 }
 
+.services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.services .box {
+  text-align: center;
+  padding: 2rem;
+}
+
+.services .box i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #0a89f2;
+}
+
+.services .box h3 {
+  font-size: 1.7rem;
+  color: #666;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.reviews .slide {
+  text-align: center;
+  padding: 2rem;
+}
+
+.reviews .slide i {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.reviews .slide p {
+  font-size: 1.5rem;
+  color: #444;
+  text-transform: capitalize;
+}
+
+.reviews .slide img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+
+.reviews .slide h3 {
+  font-size: 2rem;
+  color: #444;
+  text-transform: capitalize;
+}
+
 @media (max-width: 1200px) {
   body.active {
     padding-left: 0;
