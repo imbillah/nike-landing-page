@@ -326,6 +326,73 @@ section {
     }
   }
 }
+.contact {
+  .row {
+    @include flex(center);
+
+    form {
+      flex: 1 1 41rem;
+
+      .box {
+        padding: 2rem 0;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        border-bottom: $border;
+        width: 100%;
+
+        &:focus {
+          border-color: $blue;
+        }
+      }
+      textarea {
+        height: 15rem;
+        resize: none;
+      }
+    }
+    .contact-info {
+      flex: 1 1 41rem;
+
+      h3 {
+        padding-bottom: 1rem;
+        @include tittleText(2rem);
+      }
+      p {
+        @include graphText(1.5rem);
+      }
+      .icons {
+        padding: 1.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        i {
+          height: 5rem;
+          width: 5rem;
+          line-height: 5rem;
+          border-radius: 50%;
+          font-size: 2rem;
+          background: $blue;
+          color: $white;
+          text-align: center;
+        }
+        p {
+          @include graphText(1.5rem);
+        }
+      }
+      .share {
+        padding-top: 2rem;
+        a {
+          font-size: 4rem;
+          margin-right: 2rem;
+          color: $light-color;
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
 // media queries
 @media (max-width: 1200px) {
   body.active {
