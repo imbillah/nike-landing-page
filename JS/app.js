@@ -14,7 +14,36 @@ window.onscroll = () => {
   }
 };
 
-let swiper = new Swiper('.product-slider', {
+let productPreviewContainer = document.querySelector(
+  '.products-preview-container'
+);
+let prodcutPreview =
+  productPreviewContainer.querySelectorAll('.product-preview');
+
+document.querySelectorAll('.products .slide .btn').forEach((detailBtn) => {
+  detailBtn.onclick = () => {
+    productPreviewContainer.style.display = 'block';
+    let name = detailBtn.getAttribute('data-product');
+    prodcutPreview.forEach((preview) => {
+      let target = preview.getAttribute('data-target');
+      if (name == target) {
+        preview.style.display = 'flex';
+      }
+    });
+  };
+});
+document
+  .querySelectorAll('.products-preview-container .product-preview .fa-times')
+  .forEach((close) => {
+    close.onclick = () => {
+      productPreviewContainer.style.display = 'none';
+      prodcutPreview.forEach((closePreview) => {
+        closePreview.style.display = 'none';
+      });
+    };
+  });
+
+var swiper = new Swiper('.products-slider', {
   loop: true,
   spaceBetween: 20,
   grabCursor: true,
